@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/cardviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/card_color"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/updateButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="56dp"
+                    android:background="@color/card_color"
+                    android:src="@drawable/baseline_edit_square_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/deleteButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="28dp"
+                    android:src="@drawable/baseline_delete_24"
+                    app:layout_constraintStart_toEndOf="@+id/updateButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="265dp"
+                    android:layout_height="57dp"
+                    android:text="Title"
+                    android:textColor="@color/black"
+                    android:textIsSelectable="false"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="13dp"
+                    tools:layout_editor_absoluteY="-1dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:text="CheckBox" />
+
+            <TextView
+                android:id="@+id/contentTextView"
+                android:layout_width="362dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="4dp"
+                android:maxLines="3"
+                android:text="Content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

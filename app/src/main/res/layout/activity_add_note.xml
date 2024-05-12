@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNote">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="525dp"
+        app:srcCompat="@drawable/design_two" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="767dp"
+        android:layout_marginTop="-312dp"
+        app:srcCompat="@drawable/design_one" />
+
+    <TextView
+        android:id="@+id/addNoteHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/add_task"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/addNoteHeading"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/blue_boarder"
+        android:backgroundTint="@color/input_color"
+        android:hint="@string/Title_hint"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="377dp"
+        android:layout_height="280dp"
+        android:layout_below="@+id/titleEditText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/blue_boarder"
+        android:backgroundTint="#A9FFD180"
+        android:gravity="top"
+        android:hint="@string/enter_the_description"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-27dp"
+        android:layout_marginBottom="-27dp">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="81dp"
+            android:layout_height="69dp"
+            android:layout_marginEnd="360dp"
+            android:layout_marginBottom="104dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/btn" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="252dp"
+            android:layout_marginBottom="116dp"
+            android:backgroundTint="@color/green"
+            android:contentDescription="TODO"
+            android:src="@drawable/baseline_done_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backbtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
