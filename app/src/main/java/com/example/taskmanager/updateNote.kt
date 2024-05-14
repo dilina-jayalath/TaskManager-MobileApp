@@ -30,13 +30,19 @@ class updateNote : AppCompatActivity() {
         binding.updateContentEditText.setText(note.content)
 
         binding.updateSaveButton.setOnClickListener{
-            var newTitle = binding.updateTitleEditText.text.toString()
-            var newContent = binding.updateContentEditText.text.toString()
-            var updatedNote = Note(noteId, newTitle, newContent , false)
-            db.updateNote(updatedNote)
-            finish()
-            Toast.makeText(this, "Changes Saved", Toast.LENGTH_SHORT).show()
+            val newTitle = binding.updateTitleEditText.text.toString()
+            val newContent = binding.updateContentEditText.text.toString()
+
+            if (newTitle.isBlank() || newContent.isBlank()) {
+                Toast.makeText(this, "Title and Content cannot be empty", Toast.LENGTH_SHORT).show()
+            } else {
+                val updatedNote = Note(noteId, newTitle, newContent, false)
+                db.updateNote(updatedNote)
+                finish()
+                Toast.makeText(this, "Changes Saved", Toast.LENGTH_SHORT).show()
+            }
         }
+
 
         binding.backbtn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
